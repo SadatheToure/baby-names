@@ -4,16 +4,17 @@ import './App.css';
 
 class App extends Component {
   render() {
+    
+    const { data } = this.props;
+    const namesList = data.map(name => {
+      return (
+        <li key={name.id} className={name.sex}>{name.name}</li>
+      )
+    })
+
     return (
       <ul className="App">
-            <li className='boy'>Name 2</li>
-            <li className='girl'>Name 2</li>
-            <li className='boy'>Name 3</li>
-            <li className='girl'>Name 3</li>
-            <li className='boy'>Name 2</li>
-            <li className='girl'>Name 2</li>
-            <li className='boy'>Name 3</li>
-            <li className='boy'>Name 3</li>
+        {namesList}
       </ul>
     );
   }

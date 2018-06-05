@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
+import NamesList from './components/NamesList';
+import Credit from './components/Credit';
+
 // import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
-    
-    const { data } = this.props;
-    const namesList = data.map(name => {
-      return (
-        <li key={name.id} className={name.sex}>{name.name}</li>
-      )
-    })
-
     return (
-      <ul className="App">
-        {namesList}
-      </ul>
-    );
+      <div>
+        <NamesList data={this.props.data} />
+        <Credit />
+      </div>
+    )
   }
 }
 

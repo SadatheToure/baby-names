@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import NamesList from './components/NamesList';
 import Credit from './components/Credit';
-
+import Search from './components/Search';
+import ShortList from './components/ShortList';
 // import logo from './logo.svg';
+import 'normalize-css';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NamesList data={this.props.data} />
-        <Credit />
+        <Search />
+        <main>
+          <ShortList />
+          <NamesList data={this.props.data} />
+          <Credit />
+        </main>
       </div>
     )
   }
